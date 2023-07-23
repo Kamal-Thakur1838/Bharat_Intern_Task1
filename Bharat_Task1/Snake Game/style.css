@@ -1,0 +1,210 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    /* background-color: black; */
+    background-image: url(im1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bod{
+    width: 80%;
+    height: 50vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dark-theme{
+    background-color: white;
+}
+.dark-theme .box{
+    background-color: white;
+    border: 40px solid white;
+    border-image-source: url(im3.png);
+    border-image-slice: 10%;
+    border-image-repeat: stretch;
+}
+.dark-theme .score{
+    color: black;
+}
+.dark-theme .record{
+    color: red;
+}
+.dark-theme .snake{
+    background-color: chartreuse;
+    border: 1px solid black;
+    justify-content: space-around;
+}
+.box{
+    width: 70vmin;
+    height: 80vmin;
+    border: 40px solid white;
+    border-image-source: url(im3.png);
+    border-image-slice: 10%;
+    border-image-repeat: stretch;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+    background-color: rgba(65, 168, 6, 0.596);
+}
+.im{
+    width: 250px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0%;
+    margin-left: 70%;
+    margin-top: -29%;
+}
+.im img{
+    width: 400px;
+    height: 70vh;
+}
+.head{
+    background-color: red;
+    border:1px solid white;
+    border-radius: 30%;
+}
+.snake{
+    background-color: rgba(51, 51, 51, 0.952);
+    border: 1px solid white;
+    border-radius: 30%;
+}
+.food{
+    background-color:rgba(255, 94, 0, 0.918);
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.score{
+    color: white;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+     margin: 5%; 
+     margin-right: 4%;
+     margin-top: -25%; 
+     background-color: rgba(144, 238, 144, 0.658);
+     padding: 1% 2%;
+     border: 2px solid white;
+     border-radius: 20%;
+}
+.record{
+    color: black;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin: -24%;
+    margin-top: -40%;
+    margin-right: 2%;
+    background-color: rgba(144, 238, 144, 0.658);
+     padding: 1% 2%;
+     border: 2px solid white;
+     border-radius: 20%;
+}
+.darkMode{
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.darkMode input{
+    -webkit-appearance: none;
+    appearance: none;
+    margin-right: 80%;
+    width: 100px;
+    height: 44px;
+    border: 3px solid wheat;
+    border-radius: 40px;
+    position: relative;
+    transition: 300ms;
+    padding: 16px;
+    place-items: center;
+    display: grid;
+    cursor: pointer;
+}
+.darkMode input:checked{
+    background-color: white;
+}
+.darkMode input::before{
+    position: absolute;
+    content: '';
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    left: 0%;
+    border-radius: 50%;
+    transition-duration: 300ms;
+}
+.darkMode input:checked::before{
+    left: 55px;
+    background-color: black;
+}
+
+ @media (max-width:600px){
+     body{
+        background-color: palegreen;
+     }
+    .bod{
+        width: 550px;
+        height: auto;
+        margin: 5%;
+        /* background-color: rgb(229, 220, 245); */
+    }
+    .box{
+        position: fixed;
+        padding: 2%;
+        background-color: greenyellow;
+        width: 70%;
+        height: 50%;
+    }
+    .score{
+        font-size: 30px;
+        margin-bottom: 60%;
+        margin-right: 35%; 
+        z-index: 1;
+    }
+    .record{
+        font-size: 30px;
+        margin-bottom: 45%;
+        margin-right: 15%; 
+        z-index: 2;
+    }
+    .im{
+        display: none;
+    }
+    .darkMode{
+        margin-left: -8%;
+        margin-bottom: -4%;
+        width: 10%;
+        padding: 3% 15%;
+        display: block;
+    }
+    .darkbutton{
+         width: 119%;
+        }
+}
+
+ @media (min-width:600px) and (max-width:1050px){
+    .im img{
+        display: none;
+    }
+    .record{
+        margin-top: -20%;
+        margin-left: -22%;
+        margin-right: 2%;
+    }
+    .box{
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+ }
+ 
